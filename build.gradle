@@ -20,3 +20,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+bootJar {
+    mainClass = 'org.example.simplesecurity.SimpleSecurityApplication'
+}
+
+jar {
+    enabled = true
+}
